@@ -1,5 +1,7 @@
 --https://www.w3resource.com/sql/sql-table.php
 
+create procedure  print(txt varchar2) is begin dbms_output.put_line(txt); end;
+
 CREATE TABLE  "AGENTS" 
    (	
     "AGENT_CODE" CHAR(6) NOT NULL PRIMARY KEY, 
@@ -34,6 +36,5 @@ CREATE type  "AGENTS_OB" as object
 	"COUNTRY" VARCHAR2(25) 
 	 );
 
--- Michael Watson-Fore
 CREATE type  "AGENTS_NT" as table of AGENTS_OB;     
      
